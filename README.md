@@ -1,3 +1,2 @@
 # SportsTracker
-This is my task project for the WEB club recruitment in NITK. It is a flutter based app to view the details of your favorite Sports team.
-This App will include SportsRadar API, to fetch the all the neccesary sports information.
+Included sports such as NBA and BasketBall to this App. App works fine, but it needs a lot of UI updates which is to be taken care of.
