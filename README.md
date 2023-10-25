@@ -18,8 +18,7 @@ A few resources that i revered:
 
 Learned a lot of stuffs. Had a very good experience!
 
-
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## to use the App
+-To run the App enter your API key in the Key.dart file. you obtain the key after registering in [link](https://api-sports.io/)
+-clone the repository
+-enter "flutter run" in the terminal
