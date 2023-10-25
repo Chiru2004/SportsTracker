@@ -1,3 +1,5 @@
+//class model to obtain the statistics regarding the NBA team
+
 class NBATeamStat {
   int? games;
   int? fastBreakPoints;

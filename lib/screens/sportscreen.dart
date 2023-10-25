@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:sportstracker/models/sport.dart';
+import 'package:sportstracker/screens/formulamenu.dart';
 import 'package:sportstracker/screens/formulascreen.dart';
 import 'package:sportstracker/screens/nbateamscreen.dart';
 import 'package:sportstracker/widgets/sports_item.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SportScreen extends StatelessWidget
 {
 const SportScreen({super.key});
 
 void onSelectsport(context){
-  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) =>const FormulaScreen()));
+  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const FormulaMenuScreen()));
 }
 void onSelectNBA(context){
   Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => const NBAScreen()));
@@ -30,13 +32,13 @@ Widget build(BuildContext context) {
 
 //Grid view of the objects
    body: GridView(
-     gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1,childAspectRatio: 8/3,mainAxisSpacing: 16),
+     gridDelegate:const  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1,childAspectRatio: 8/2.7,mainAxisSpacing: 16),
  padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 16),
  children: [
 
-    SportsItem(sport:Sport(id: 'c1', icon: Icons.drive_eta, title: "Forumula 1", color: Colors.red),
+    SportsItem(sport:Sport(id: 'c1', icon: Icons.speed, title: "Forumula 1", color: Colors.red),
                            onselect:(){ onSelectsport(context);},),
-    SportsItem(sport:Sport(id: 'c2', icon: Icons.sports_basketball_outlined, title: "NBA", color: Colors.blue),
+    SportsItem(sport:Sport(id: 'c2', icon: Icons.sports_basketball_rounded, title: "NBA", color: Colors.blue),
                            onselect:(){ onSelectNBA(context);},),
 
            ],

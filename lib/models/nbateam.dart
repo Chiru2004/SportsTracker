@@ -1,3 +1,5 @@
+
+//model to receive and construct a object instance of the type NBA team.
 class NBATeam {
   int? id;
   String? name;
@@ -20,7 +22,8 @@ class NBATeam {
       this.nbaFranchise,
       this.leagues});
 
-  NBATeam.fromJson(Map<String, dynamic> json) {
+  NBATeam.fromJson(Map<String, dynamic> json) 
+  {
     id = json['id'];
     name = json['name'];
     nickname = json['nickname'];
@@ -33,7 +36,8 @@ class NBATeam {
         json['leagues'] != null ? new Leagues.fromJson(json['leagues']) : null;
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() 
+  {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['name'] = this.name;
@@ -50,7 +54,8 @@ class NBATeam {
   }
 }
 
-class Leagues {
+class Leagues 
+{
   Standard? standard;
   Standard? vegas;
   Standard? utah;
@@ -58,7 +63,8 @@ class Leagues {
 
   Leagues({this.standard, this.vegas, this.utah, this.sacramento});
 
-  Leagues.fromJson(Map<String, dynamic> json) {
+  Leagues.fromJson(Map<String, dynamic> json) 
+  {
     standard = json['standard'] != null
         ? new Standard.fromJson(json['standard'])
         : null;
@@ -69,7 +75,8 @@ class Leagues {
         : null;
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() 
+  {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.standard != null) {
       data['standard'] = this.standard!.toJson();
@@ -87,7 +94,8 @@ class Leagues {
   }
 }
 
-class Standard {
+class Standard 
+{
   String? conference;
   String? division;
 

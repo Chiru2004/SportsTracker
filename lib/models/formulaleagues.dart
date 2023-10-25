@@ -1,3 +1,5 @@
+
+// Class model to obtain the Object, which contains all the information regarding a team!
 class Fobj {
   int? id;
   String? name;
@@ -32,7 +34,7 @@ class Fobj {
       this.engine,
       this.tyres});
 
-  Fobj.fromJson(Map<String, dynamic> json) {
+  Fobj.fromJson(Map<String, dynamic> json) {     // Function to obtain the Fobj instance from the given Map of the type <string,dynamic>
     id = json['id'];
     name = json['name'];
     logo = json['logo'];
@@ -52,7 +54,7 @@ class Fobj {
     tyres = json['tyres'];
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJson() {             //Function to Get a Map from the given Fogj instance
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
     data['name'] = this.name;
@@ -75,7 +77,7 @@ class Fobj {
   }
 }
 
-class HighestRaceFinish {
+class HighestRaceFinish {   //class model for Highest Race finish inside of Fobj
   int? position;
   int? number;
 
